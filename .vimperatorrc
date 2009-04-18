@@ -1,0 +1,57 @@
+" ステータスバーにfeedボタンを表示
+" http://d.hatena.ne.jp/teramako/20071205/p1
+:javascript <<EOM
+(function(){
+  var feedPanel = document.createElement('statusbarpanel');
+  var feedButton = document.getElementById('feed-button');
+  feedPanel.setAttribute('id','feed-panel-clone');
+  feedPanel.appendChild(feedButton.cloneNode(true));
+  feedButton.parentNode.removeChild(feedButton);
+  document.getElementById('status-bar').insertBefore(feedPanel,document.getElementById('security-button'));
+})();
+EOM
+
+" zsh っぽい補完に
+set wildmode=longest,list
+set complete=sfbhl
+
+" delicious_search.js用設定
+autocmd VimperatorEnter ".*" :set complete+=D
+
+" GUIメニューの表示設定
+set go=mnbr
+
+" ブラウザタイトルの変更
+set titlestring=Firefox
+
+" ポップアップをFirefoxデフォルトに
+set pps=2
+
+" j/k でのスクロール幅を1行から3行に変更
+map j 3<C-e>
+map k 3<C-y>
+ 
+" J/K をC-d/u互換に
+map J <C-d>
+map K <C-u>
+
+" 現在開いているページのはてブページにアクセス
+noremap ,h :hatebuview<CR>
+
+" 現在開いているページをTwitterにpost
+noremap ,t :tweetthispage<CR>
+
+" 表示しているタイトルをコピー
+noremap ,y :js util.copyToClipboard(buffer.title)<CR>
+
+" メッセージクリア
+map c :<Esc>
+
+" amazon simple uriのアサマシ用
+let g:amazon_asamashi = "fkfk-22"
+
+" nextlinkの設定
+let g:nextlink_followlink = "true"
+
+" AutoPagerize on/off の割当
+noremap ,a :gmcommand AutoPagerize\ -\ on/off<CR>
