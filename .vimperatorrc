@@ -11,6 +11,12 @@
 })();
 EOM
 
+" 新規タブ追加ボタンを削除
+" http://fifnel.com/2009/03/15/2278/
+style -name simple_tabs_container chrome://* <<EOM
+.tabs-newtab-button {display: none !important;}
+EOM
+
 " zsh っぽい補完に
 set wildmode=longest,list
 set complete=sfbhl
@@ -38,6 +44,9 @@ map K <C-u>
 " 現在開いているページのはてブページにアクセス
 noremap ,h :hatebuview<CR>
 
+" 現在開いているページのdelicious "Everyone Bookmarks for"ページにアクセス
+noremap ,d :duv +n<CR>
+
 " 現在開いているページをTwitterにpost
 noremap ,t :tweetthispage<CR>
 
@@ -55,3 +64,7 @@ let g:nextlink_followlink = "true"
 
 " AutoPagerize on/off の割当
 noremap ,a :gmcommand AutoPagerize\ -\ on/off<CR>
+
+" bit.ly.jsの設定
+let g:bit_ly_id = "fkfk"
+let g:bit_ly_api_key = "R_af42d61ae0b76a9b796f6dd0cc01bd80"
