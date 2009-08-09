@@ -6,7 +6,7 @@ var PLUGIN_INFO =
     <author mail="from.kyushu.island@gmail.com" homepage="http://d.hatena.ne.jp/from_kyushu/">from_kyushu</author>
     <version>0.1</version>
     <minVersion>1.2</minVersion>
-    <maxVersion>2.0pre</maxVersion>
+    <maxVersion>2.1</maxVersion>
     <updateURL>http://svn.coderepos.org/share/lang/javascript/vimperator-plugins/trunk/ssb.js</updateURL>
     <detail><![CDATA[
 
