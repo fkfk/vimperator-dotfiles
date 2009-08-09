@@ -4,11 +4,11 @@
     var password;
     var username;
     var passwordManager = Cc["@mozilla.org/login-manager;1"].getService(Ci.nsILoginManager);
-    var statusText = "Now reading: " + buffer.title + " " + buffer.URL;
 
     function sendTwitter()
     {
       var xhr = new XMLHttpRequest();
+      var statusText = "Now reading: " + buffer.title + " " + buffer.URL;
       xhr.open("POST", "http://twitter.com/statuses/update.json", false, username, password);
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.send("status=" + encodeURIComponent(statusText) + "&source=Vimperator");
