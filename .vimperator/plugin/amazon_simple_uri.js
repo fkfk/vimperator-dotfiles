@@ -8,7 +8,7 @@ var PLUGIN_INFO =
   <version>0.1</version>
   <license>GPL</license>
   <minVersion>1.2</minVersion>
-  <maxVersion>2.0pre</maxVersion>
+  <maxVersion>2.1</maxVersion>
   <updateURL>http://svn.coderepos.org/share/lang/javascript/vimperator-plugins/trunk/amazon_simple_uri.js</updateURL>
   <detail><![CDATA[
 
