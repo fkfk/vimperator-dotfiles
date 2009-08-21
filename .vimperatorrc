@@ -72,3 +72,6 @@ let g:bit_ly_api_key = "R_af42d61ae0b76a9b796f6dd0cc01bd80"
 " feedSomeKeys 2の設定
 autocmd LocationChange .* :fmapc
 autocmd LocationChange 'www\.google\.(co\.jp|com)/reader' :fmap! -vkey j k n p m s t v A r S N P X O gh ga gs gt gu u / ?
+
+" buffer関連
+noremap bl :buffers<CR>
