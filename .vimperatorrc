@@ -75,3 +75,12 @@ autocmd LocationChange 'www\.google\.(co\.jp|com)/reader' :fmap! -vkey j k n p m
 
 " buffer関連
 noremap bl :buffers<CR>
+
+" 外部エディタの設定
+:javascript <<EOM
+(function(){
+  if(liberator.has("MacUnix")) {
+    liberator.execute("set editor='/opt/local/bin/mvim -f'");
+  }
+})();
+EOM
